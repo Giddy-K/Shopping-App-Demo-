@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-// home IP => 192.168.101.116
-// office IP =>
-String uri = 'http://192.168.88.76:3000';
+//! You need to change the IP to your current devices' IP for the auth to work!!
+//? The port must remains 3000
+String uri = 'http://192.168.101.28:3000';
 
 class GlobalVariables {
   // COLORS
