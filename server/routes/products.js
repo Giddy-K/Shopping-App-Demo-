@@ -1,10 +1,12 @@
 const express = require("express");
 const productRouter = express.Router();
-const auth = require("../middlewares/auth");
-const { Product } = require("../models/product");
+const auth = require("../middleware/auth");
+const Product = require("../models/product");
 
-productRouter.get("/api/products/", auth, async (req, res) => {
+// /api/products?category=Essentials
+productRouter.get("/api/products", auth, async (req, res) => {
   try {
+    console.log(req.query.category);
     const products = await Product.find({ category: req.query.category });
     res.json(products);
   } catch (e) {
@@ -12,14 +14,13 @@ productRouter.get("/api/products/", auth, async (req, res) => {
   }
 });
 
-// create a get request to search products and get them
-// /api/products/search/i
+// get request to search products and get them
 productRouter.get("/api/products/search/:name", auth, async (req, res) => {
   try {
+    console.log(req.query.category);
     const products = await Product.find({
       name: { $regex: req.params.name, $options: "i" },
     });
-
     res.json(products);
   } catch (e) {
     res.status(500).json({ error: e.message });
