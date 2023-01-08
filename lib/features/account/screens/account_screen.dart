@@ -18,32 +18,41 @@ class AccountScreen extends StatelessWidget {
               gradient: GlobalVariables.appBarGradient,
             ),
           ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                alignment: Alignment.topLeft,
-                child: Center(
-                  child: Image.asset('assets/images/amazon_in.png',
-                      width: 150,
-                      height: 50,
-                      color: Colors.black),
+          leading: Container(
+            alignment: Alignment.topLeft,
+            child: Center(
+              child: Image.asset(
+                'assets/images/Bull.png',
+              ),
+            ),
+          ),
+          title: Container(
+            alignment: Alignment.topLeft,
+            child: const Center(
+              child: Text(
+                'MAASAI MARKET',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Row(
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.only(right: 15),
-                      child: Icon(Icons.notifications_outlined),
-                    ),
-                    Icon(Icons.search),
-                  ],
-                ),
-              )
-            ],
+            ),
           ),
+          actions: [
+            Container(
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 15),
+                    child: Icon(Icons.notifications_outlined),
+                  ),
+                  Icon(Icons.search),
+                ],
+              ),
+            )
+          ],
+          centerTitle: true,
         ),
       ),
       body: Column(

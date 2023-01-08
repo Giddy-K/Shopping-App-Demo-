@@ -47,12 +47,14 @@ class _OrdersState extends State<Orders> {
                       ),
                     ),
                   ),
-                  Container(
-                    padding: const EdgeInsets.only(right: 15),
-                    child: Text(
-                      'See All',
-                      style: TextStyle(
-                        color: GlobalVariables.selectedNavBarColor,
+                  InkWell(
+                    child: Container(
+                      padding: const EdgeInsets.only(right: 15),
+                      child: Text(
+                        'See All',
+                        style: TextStyle(
+                          color: GlobalVariables.selectedNavBarColor,
+                        ),
                       ),
                     ),
                   ),

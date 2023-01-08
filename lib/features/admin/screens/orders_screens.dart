@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:app4/common/widget/loader.dart';
 import 'package:app4/features/account/widgets/product.dart';
 import 'package:app4/features/admin/services/admin_services.dart';
@@ -40,7 +38,8 @@ class _OrdersScreenState extends State<OrdersScreen> {
               final orderData = orders![index];
               return GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, OrderDetailScreen.routeName, arguments: orderData);
+                  Navigator.pushNamed(context, OrderDetailScreen.routeName,
+                      arguments: orderData);
                 },
                 child: SizedBox(
                   height: 140,

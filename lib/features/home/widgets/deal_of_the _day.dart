@@ -1,8 +1,9 @@
-import 'package:app4/common/widget/loader.dart';
+// ignore: file_names
 import 'package:app4/features/home/services/home_services.dart';
 import 'package:app4/features/product_details/screens/product_details._screen.dart';
 import 'package:app4/models/product.dart';
 import 'package:flutter/material.dart';
+import 'package:app4/common/widget/loader.dart';
 
 class DealOfDay extends StatefulWidget {
   const DealOfDay({super.key});

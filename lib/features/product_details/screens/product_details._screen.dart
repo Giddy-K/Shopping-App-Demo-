@@ -204,6 +204,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               child: CustomButton(
+                color: const Color.fromARGB(255, 19, 238, 254),
                 text: 'Buy Now',
                 onTap: () {},
               ),
@@ -214,7 +215,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               child: CustomButton(
-                color: const Color.fromRGBO(254, 216, 19, 1),
+                color: const Color.fromARGB(255, 19, 121, 254),
                 text: 'Add to cart',
                 onTap: addToCart,
               ),
