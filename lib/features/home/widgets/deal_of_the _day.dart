@@ -41,12 +41,18 @@ class _DealOfDayState extends State<DealOfDay> {
                 onTap: navigateToDetailsScreen,
                 child: Column(
                   children: [
-                    Container(
-                      alignment: Alignment.topLeft,
-                      padding: const EdgeInsets.only(left: 10, top: 15),
-                      child: const Text(
-                        'Deal of the day',
-                        style: TextStyle(fontSize: 20),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        alignment: Alignment.topLeft,
+                        padding: const EdgeInsets.only(left: 10, top: 15),
+                        child: const Text(
+                          'Deal of the day',
+                          style: TextStyle(
+                            fontSize: 20,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -54,20 +60,20 @@ class _DealOfDayState extends State<DealOfDay> {
                     ),
                     Image.network(product!.images[0],
                         height: 235, fit: BoxFit.fitHeight),
-                    Container(
-                        padding: const EdgeInsets.only(left: 15),
-                        alignment: Alignment.center,
-                        child: const Text('\$100')),
-                    Container(
-                      alignment: Alignment.center,
-                      padding:
-                          const EdgeInsets.only(left: 15, top: 5, right: 40),
-                      child: const Text(
-                        'Laptop & Accessories',
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
+                    // Container(
+                    //     padding: const EdgeInsets.only(left: 15),
+                    //     alignment: Alignment.center,
+                    //     child: const Text('\$100')),
+                    // Container(
+                    //   alignment: Alignment.center,
+                    //   padding:
+                    //       const EdgeInsets.only(left: 15, top: 5, right: 40),
+                    //   child: const Text(
+                    //     'Laptop & Accessories',
+                    //     maxLines: 2,
+                    //     overflow: TextOverflow.ellipsis,
+                    //   ),
+                    // ),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(

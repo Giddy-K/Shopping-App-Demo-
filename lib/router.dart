@@ -2,6 +2,8 @@ import 'package:app4/common/widget/bottom_bar.dart';
 import 'package:app4/features/address/screens/address_screen.dart';
 import 'package:app4/features/admin/screens/add_product_screen.dart';
 import 'package:app4/features/auth/screens/auth_screen.dart';
+import 'package:app4/features/auth/screens/login_screen.dart';
+import 'package:app4/features/auth/screens/signup_screen.dart';
 import 'package:app4/features/home/screens/category_deals_screen.dart';
 import 'package:app4/features/home/screens/home_screen.dart';
 import 'package:app4/features/order_details/screens/order_details_screen.dart';
@@ -17,6 +19,16 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_) => const AuthScreen(),
+      );
+    case LoginScreen.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => const LoginScreen(),
+      );
+    case SignUpScreen.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => const SignUpScreen(),
       );
     case HomeScreen.routeName:
       return MaterialPageRoute(

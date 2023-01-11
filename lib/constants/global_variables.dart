@@ -22,8 +22,8 @@ class GlobalVariables {
 
   // STATIC IMAGES
   static const List<String> carouselImages = [
-    'https://images.freeimages.com/images/large-previews/c6b/beautiful-cow-1641312.jpg',
-    'https://images.freeimages.com/images/large-previews/b64/goat-at-animal-sanctuary-2-1639651.jpg',
+    'https://farmhouseguide.com/wp-content/uploads/2022/05/Farm-black-and-white-cows-graze-in-meadow-ee220511-735x429.png.webp',
+    'https://farmhouseguide.com/wp-content/uploads/2022/05/The-Jersey-cow-ee220511-735x429.png.webp',
     'https://images.freeimages.com/images/large-previews/9d0/sheep-1639780.jpg',
     'https://images.freeimages.com/images/large-previews/151/free-ducks-and-hens-images-1632436.jpg',
     'https://images.freeimages.com/images/large-previews/e30/free-chicken-riding-pig-image-1632467.jpg',

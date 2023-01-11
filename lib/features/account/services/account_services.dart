@@ -5,6 +5,7 @@ import 'package:app4/constants/global_variables.dart';
 import 'package:app4/constants/utilities.dart';
 import 'package:app4/features/auth/providers/user_provider.dart';
 import 'package:app4/features/auth/screens/auth_screen.dart';
+import 'package:app4/features/auth/screens/login_screen.dart';
 import 'package:app4/models/order.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -45,7 +46,7 @@ class AccountServices {
     return orderList;
   }
 
-   void logOut(BuildContext context) async {
+  void logOut(BuildContext context) async {
     try {
       SharedPreferences sharedPreferences =
           await SharedPreferences.getInstance();
@@ -53,7 +54,7 @@ class AccountServices {
       // ignore: use_build_context_synchronously
       Navigator.pushNamedAndRemoveUntil(
         context,
-        AuthScreen.routeName,
+        LoginScreen.routeName,
         (route) => false,
       );
     } catch (e) {

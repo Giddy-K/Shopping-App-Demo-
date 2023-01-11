@@ -30,7 +30,7 @@ class TopCartegories extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                     child: Image.asset(
                       GlobalVariables.categoryImages[index]['image']!,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitWidth,
                       height: 40,
                       width: 40,
                     ),
