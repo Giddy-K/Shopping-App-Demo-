@@ -1,7 +1,7 @@
 import 'package:app4/common/widget/loader.dart';
 import 'package:app4/constants/global_variables.dart';
 import 'package:app4/features/home/services/home_services.dart';
-import 'package:app4/features/product_details/screens/product_details._screen.dart';
+import 'package:app4/features/product_details/screens/product_details_screen.dart';
 import 'package:app4/models/product.dart';
 import 'package:flutter/material.dart';
 
@@ -61,17 +61,13 @@ class _CategoryDealsScreenState extends State<CategoryDealsScreen> {
                     style: const TextStyle(fontSize: 20),
                   ),
                 ),
-                SizedBox(
-                  height: 170,
+                Expanded(
                   child: GridView.builder(
-                    scrollDirection: Axis.horizontal,
-                    padding: const EdgeInsets.only(left: 15),
                     itemCount: productList!.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 1,
-                            childAspectRatio: 1.4,
-                            mainAxisSpacing: 10),
+                      crossAxisCount: 2,
+                    ),
                     itemBuilder: (context, index) {
                       final product = productList![index];
                       return GestureDetector(
@@ -82,8 +78,9 @@ class _CategoryDealsScreenState extends State<CategoryDealsScreen> {
                         },
                         child: Column(
                           children: [
+                            const SizedBox(height: 10),
                             SizedBox(
-                              height: 130,
+                              height: 140,
                               child: DecoratedBox(
                                 decoration: BoxDecoration(
                                   border: Border.all(

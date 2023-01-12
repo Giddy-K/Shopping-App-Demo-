@@ -39,17 +39,18 @@ class _AdminScreenState extends State<AdminScreen> {
               gradient: GlobalVariables.appBarGradient,
             ),
           ),
+          leading: Container(
+            alignment: Alignment.topLeft,
+            child: Center(
+              child: Image.asset(
+                'assets/images/Bull.png',
+              ),
+            ),
+          ),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                alignment: Alignment.topLeft,
-                child: Center(
-                  child: Image.asset('assets/images/amazon_in.png',
-                      width: 150, height: 50, color: Colors.black),
-                ),
-              ),
-              const Text(
+            children: const [
+              Text(
                 'Admin',
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),

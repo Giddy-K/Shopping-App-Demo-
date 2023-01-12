@@ -13,7 +13,7 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  Auth _auth = Auth.signup;
+  final Auth _auth = Auth.signup;
   bool _obscureText = true;
   final _signUpFormKey = GlobalKey<FormState>();
   final AuthService authService = AuthService();
@@ -167,8 +167,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 ),
                                 validator: (val) {
                                   if (val!.isEmpty) return 'Empty';
-                                  if (val != _passwordController.text)
+                                  if (val != _passwordController.text) {
                                     return 'Not Match';
+                                  }
                                   return null;
                                 },
                                 controller: _confirmpassController,

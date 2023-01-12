@@ -52,7 +52,8 @@ class _PostsScreenState extends State<PostsScreen> {
             body: GridView.builder(
               itemCount: products!.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2),
+                crossAxisCount: 2,
+              ),
               itemBuilder: (context, index) {
                 final productData = products![index];
                 return Column(

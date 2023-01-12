@@ -1,4 +1,5 @@
 import 'package:app4/common/widget/loader.dart';
+import 'package:app4/features/account/widgets/top_buttons.dart';
 import 'package:app4/features/admin/models/sales.dart';
 import 'package:app4/features/admin/services/admin_services.dart';
 import 'package:app4/features/admin/widget/category_products_chart.dart';
@@ -36,6 +37,9 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
         ? const Loader()
         : Column(
             children: [
+              const SizedBox(height: 30),
+              const TopButtons(),
+              const SizedBox(height: 50),
               Text(
                 '\$$totalSales',
                 style: const TextStyle(
@@ -43,8 +47,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
-                height: 250,
+              Expanded(
                 child: CategoryProductsChart(seriesList: [
                   charts.Series(
                     id: 'Sales',

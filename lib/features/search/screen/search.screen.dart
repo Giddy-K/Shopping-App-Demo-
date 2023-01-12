@@ -1,7 +1,7 @@
 import 'package:app4/common/widget/loader.dart';
 import 'package:app4/constants/global_variables.dart';
 import 'package:app4/features/home/widgets/address_box.dart';
-import 'package:app4/features/product_details/screens/product_details._screen.dart';
+import 'package:app4/features/product_details/screens/product_details_screen.dart';
 import 'package:app4/features/search/services/search_services.dart';
 import 'package:app4/features/search/widget/searched_product.dart';
 import 'package:app4/models/product.dart';

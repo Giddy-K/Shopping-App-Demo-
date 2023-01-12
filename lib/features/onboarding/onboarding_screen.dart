@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:app4/common/widget/custom_button.dart';
 import 'package:app4/common/widget/sizeconfig.dart';
 import 'package:app4/features/auth/screens/login_screen.dart';

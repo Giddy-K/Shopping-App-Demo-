@@ -7,7 +7,7 @@ import 'package:app4/features/auth/screens/signup_screen.dart';
 import 'package:app4/features/home/screens/category_deals_screen.dart';
 import 'package:app4/features/home/screens/home_screen.dart';
 import 'package:app4/features/order_details/screens/order_details_screen.dart';
-import 'package:app4/features/product_details/screens/product_details._screen.dart';
+import 'package:app4/features/product_details/screens/product_details_screen.dart';
 import 'package:app4/features/search/screen/search.screen.dart';
 import 'package:app4/models/order.dart';
 import 'package:app4/models/product.dart';

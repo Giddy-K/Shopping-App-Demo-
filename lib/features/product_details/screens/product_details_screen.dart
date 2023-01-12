@@ -1,6 +1,7 @@
 import 'package:app4/common/widget/custom_button.dart';
 import 'package:app4/common/widget/stars.dart';
 import 'package:app4/constants/global_variables.dart';
+import 'package:app4/features/address/screens/address_screen.dart';
 import 'package:app4/features/product_details/services/product_details_services.dart';
 import 'package:app4/features/search/screen/search.screen.dart';
 import 'package:app4/models/product.dart';
@@ -47,6 +48,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   void addToCart() {
     productDeatilsServices.addToCart(context: context, product: widget.product);
+  }
+
+  void navigateToAddress(int sum) {
+    Navigator.pushNamed(context, AddressScreen.routeName,
+        arguments: sum.toString());
   }
 
   @override
@@ -206,7 +212,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               child: CustomButton(
                 color: const Color.fromARGB(255, 19, 238, 254),
                 text: 'Buy Now',
-                onTap: () {},
+                onTap: () => navigateToAddress(widget.product.price.toInt()),
               ),
             ),
             const SizedBox(
@@ -246,7 +252,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 itemPadding: const EdgeInsets.symmetric(horizontal: 4),
                 itemBuilder: (context, _) => const Icon(
                       Icons.star,
-                      color: GlobalVariables.secondaryColor,
+                      color: GlobalVariables.ratingColor,
                     ),
                 onRatingUpdate: (rating) {
                   productDeatilsServices.rateProduct(

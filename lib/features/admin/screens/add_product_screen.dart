@@ -25,7 +25,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
   final TextEditingController quantityNameController = TextEditingController();
   final AdminServices adminServices = AdminServices();
 
-  String category = 'Mobiles';
+  String category = 'Cows';
   List<File> images = [];
 
   final _addProductFormKey = GlobalKey<FormState>();
@@ -40,11 +40,11 @@ class _AddProductScreenState extends State<AddProductScreen> {
   }
 
   List<String> productCategories = [
-    'Mobiles',
-    'Essentials',
-    'Appliances',
-    'Books',
-    'Fashion'
+    'Cows',
+    'Goats',
+    'Sheep',
+    'Others',
+    'Products'
   ];
 
   void sellProduct() {

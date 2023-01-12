@@ -18,7 +18,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Auth _auth = Auth.signup;
+  final Auth _auth = Auth.signup;
   bool _obscureText = true;
   final _signInFormKey = GlobalKey<FormState>();
   final AuthService authService = AuthService();

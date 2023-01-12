@@ -1,17 +1,22 @@
 import 'package:app4/common/widget/bottom_bar.dart';
 import 'package:app4/features/admin/screens/admin_screens.dart';
 import 'package:app4/features/auth/providers/user_provider.dart';
-import 'package:app4/features/auth/screens/auth_screen.dart';
 import 'package:app4/features/auth/screens/login_screen.dart';
 import 'package:app4/features/auth/services/auth_services.dart';
 import 'package:app4/features/onboarding/onboarding_screen.dart';
 import 'package:app4/router.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'constants/global_variables.dart';
 
-void main() {
+late final int? initScreen;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  initScreen = ( prefs.getInt("initScreen"));
+  await prefs.setInt("initScreen", 1);
+  //print('initScreen $initScreen');
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(
       create: (context) => UserProvider(),
@@ -54,12 +59,17 @@ class _MyAppState extends State<MyApp> {
         ),
         useMaterial3: true,
       ),
+      initialRoute: initScreen == 0 || initScreen == null ? "first" : "/",
+      routes: {
+        '/': (context) =>
+            Provider.of<UserProvider>(context).user.token.isNotEmpty
+                ? Provider.of<UserProvider>(context).user.type == 'user'
+                    ? const BottomBar()
+                    : const AdminScreen()
+                : const LoginScreen(),
+        "first": (context) => const OnboardingScreen(),
+      },
       onGenerateRoute: ((settings) => generateRoute(settings)),
-      home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? Provider.of<UserProvider>(context).user.type == 'user'
-              ? const BottomBar()
-              : const AdminScreen()
-          : const LoginScreen(),
     );
   }
 }

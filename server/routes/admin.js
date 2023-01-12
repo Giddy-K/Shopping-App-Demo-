@@ -78,11 +78,11 @@ adminRouter.get("/admin/analytics", admin, async (req, res) => {
     }
 
     //category wise order fetching
-    let mobileEarnings = await fetchCategoryWiseProduct("Mobiles");
-    let essentialEarnings = await fetchCategoryWiseProduct("Essentials");
-    let applianceEarnings = await fetchCategoryWiseProduct("Appliances");
-    let booksEarnings = await fetchCategoryWiseProduct("Books");
-    let fashionEarnings = await fetchCategoryWiseProduct("Fashion");
+    let mobileEarnings = await fetchCategoryWiseProduct("Cows");
+    let essentialEarnings = await fetchCategoryWiseProduct("Goats");
+    let applianceEarnings = await fetchCategoryWiseProduct("Sheep");
+    let booksEarnings = await fetchCategoryWiseProduct("Others");
+    let fashionEarnings = await fetchCategoryWiseProduct("Products");
 
     let earnings = {
       totalEarnings,
